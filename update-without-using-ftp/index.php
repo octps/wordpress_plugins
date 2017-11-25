@@ -1,5 +1,6 @@
 <?php
 // Plugin Name: update-without-using-ftp
+// Plugin URI: 
 // Description: Update without using ftp. Please stop this plugin when WordPress update is done.
 // Version: 1.0
 // Author: Takayoshi Kitajima
@@ -27,7 +28,7 @@ if (!defined('ABSPATH')) {
  exit;	
 }
 
-function set_fs_method($args) {
+function update_without_using_ftp($args) {
 	return 'direct';
 }
-add_filter('filesystem_method','set_fs_method');
+add_filter('filesystem_method','update_without_using_ftp');
